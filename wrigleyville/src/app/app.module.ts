@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { GameScheduleComponent } from './game-schedule/game-schedule.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GameScheduleComponent
   ],
   imports: [
     BrowserModule
