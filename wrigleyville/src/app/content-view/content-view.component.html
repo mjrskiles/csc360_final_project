@@ -1,0 +1,20 @@
+<!-- Container for sidebar(s) + page content -->
+<ng-sidebar-container>
+
+    <!-- A sidebar -->
+    <ng-sidebar 
+    [(opened)]="_opened"
+    [position]="_position">
+      <a closeSidebar>Closes the sidebar</a>
+      <app-game-schedule></app-game-schedule>
+    </ng-sidebar>
+  
+    <!-- Page content -->
+    <div ng-sidebar-content>
+      <app-map></app-map>
+      <span>
+          <button (click)="_toggleSidebar()">Toggle sidebar</button>
+      </span>
+    </div>
+  
+  </ng-sidebar-container>
