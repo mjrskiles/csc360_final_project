@@ -1,10 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 body {
   background-color: lightblue;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 0px;
 }
 
+
+/*
+  I am honestly not sure why the only way to style the sidebar is in the main style sheet.
+  The ng-sidebar demo app also does it this way.
+  MS 5/3/18
+*/
 .schedule-sidebar {
   background-color: aliceblue;
   padding: 2em 1em;
