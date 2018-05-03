@@ -12,8 +12,10 @@ export class ContentViewComponent implements OnInit {
   ngOnInit() {
   }
 
-  private _opened: boolean = false;
+  private _opened: boolean = true;
   private _position: string = 'right';
+  private _showBackdrop: boolean = false;
+  private _sidebarClass: string = 'schedule-sidebar';
  
   private _toggleSidebar() {
     this._opened = !this._opened;

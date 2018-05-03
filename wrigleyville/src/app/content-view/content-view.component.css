@@ -2,6 +2,14 @@ ng-sidebar-container {
   height: 100vh;
 }
 
-ng-sidebar {
-  float: right;
+ng-sidebar a {
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #eee;
+}
+
+.schedule-sidebar {
+  background-color: #fff;
+  padding: 2em 1em;
 }

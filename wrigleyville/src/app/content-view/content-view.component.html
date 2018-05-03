@@ -4,7 +4,9 @@
     <!-- A sidebar -->
     <ng-sidebar 
     [(opened)]="_opened"
-    [position]="_position">
+    [position]="_position"
+    [showBackdrop]="_showBackdrop"
+    [sidebarClass]="'schedule-sidebar'">
       <a closeSidebar>Closes the sidebar</a>
       <app-game-schedule></app-game-schedule>
     </ng-sidebar>
