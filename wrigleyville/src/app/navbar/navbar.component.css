@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: rgb(178, 185, 199)
+}
+
+h1 {
+  font-size: 2em;
+  color: #039be5;
+  align-content: center;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #eee;
+}
+
+nav a:visited, a:link {
+  color: #039be5;
+}
+
+nav a:hover {
+  color: #607D8B;
+  background-color: #CFD8DC;
+}
+
+nav a.active {
+  color: #039be5;
+}
+
+.navbar {
+  display: inline-block;
+}
