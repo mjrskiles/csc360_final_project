@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { GameScheduleComponent } from './game-schedule/game-schedule.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameScheduleComponent
+    GameScheduleComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule

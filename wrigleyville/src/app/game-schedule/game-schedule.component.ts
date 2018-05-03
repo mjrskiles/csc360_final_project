@@ -11,5 +11,4 @@ export class GameScheduleComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
