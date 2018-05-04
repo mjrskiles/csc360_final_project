@@ -9,7 +9,6 @@ ng-sidebar a {
   background-color: #eee;
 }
 
-.schedule-sidebar {
-  background-color: #fff;
-  padding: 2em 1em;
+.map {
+  margin-left: 130px;
 }

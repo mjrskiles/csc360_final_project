@@ -5,14 +5,14 @@
   background-color: rgb(178, 185, 199)
 }
 
+img {
+  margin-left: 25px;
+}
+
 h1 {
   font-size: 2em;
   color: #039be5;
   align-content: center;
-}
-
-h2 {
-  font-size: 1.2em;
 }
 
 nav a {
