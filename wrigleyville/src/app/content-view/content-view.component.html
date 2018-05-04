@@ -1,22 +1,23 @@
 <!-- Container for sidebar(s) + page content -->
 <ng-sidebar-container>
 
-    <!-- A sidebar -->
-    <ng-sidebar 
-    [(opened)]="_opened"
-    [position]="_position"
-    [showBackdrop]="_showBackdrop"
-    [sidebarClass]="'schedule-sidebar'">
-      <a closeSidebar>Closes the sidebar</a>
-      <app-game-schedule></app-game-schedule>
-    </ng-sidebar>
-  
-    <!-- Page content -->
-    <div ng-sidebar-content>
+  <!-- A sidebar -->
+  <ng-sidebar 
+  [(opened)]="_opened"
+  [position]="_position"
+  [showBackdrop]="_showBackdrop"
+  [sidebarClass]="'schedule-sidebar'">
+    <a closeSidebar>Closes the sidebar</a>
+    <app-game-schedule></app-game-schedule>
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content>
+    
+    <span>
       <app-map class="map"></app-map>
-      <span>
-          <button (click)="_toggleSidebar()">Toggle sidebar</button>
-      </span>
-    </div>
-  
-  </ng-sidebar-container>
+      <button class="sidebar_control" (click)="_toggleSidebar()">Toggle sidebar</button>
+    </span>
+  </div>
+
+</ng-sidebar-container>
