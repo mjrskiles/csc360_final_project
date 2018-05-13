@@ -12,3 +12,7 @@ ng-sidebar a {
 .map {
   margin-left: 130px;
 }
+
+.sidebar_control {
+  float: right;
+}
