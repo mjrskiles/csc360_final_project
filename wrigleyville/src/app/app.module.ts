@@ -7,6 +7,7 @@ import { GameScheduleComponent } from './game-schedule/game-schedule.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { ContentViewComponent } from './content-view/content-view.component';
+import { GameScheduleService } from './game-schedule.service';
 
 
 
@@ -22,7 +23,7 @@ import { ContentViewComponent } from './content-view/content-view.component';
     BrowserModule,
     SidebarModule.forRoot(),
   ],
-  providers: [],
+  providers: [GameScheduleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
