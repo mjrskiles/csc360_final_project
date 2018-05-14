@@ -9,13 +9,13 @@ import { TrainTrackerResponse } from '../TrainTrackerResponse';
 })
 export class ContentViewComponent implements OnInit {
 
-  redLineArrivals: string
+  redLineArrivals: TrainTrackerResponse
   request: string
 
   constructor(private redLineTrackerService: RedLineTrackerService) { }
 
   ngOnInit() {
-    this.redLineTrackerService.getNextArrivals().subscribe(response => this.redLineArrivals = response.json());
+    this.redLineTrackerService.getNextArrivals().subscribe(response => this.redLineArrivals = response);
     this.request = this.redLineTrackerService.getLastRequest()
   }
 
