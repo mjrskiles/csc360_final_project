@@ -11,6 +11,8 @@ import { GameScheduleService } from './game-schedule.service';
 import { RedLineTrackerService } from './red-line-tracker.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Http, HttpModule } from '@angular/http';
+import { TrendsComponent } from './trends/trends.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 
@@ -21,12 +23,14 @@ import { Http, HttpModule } from '@angular/http';
     NavbarComponent,
     MapComponent,
     ContentViewComponent,
+    TrendsComponent,
   ],
   imports: [
     BrowserModule,
     SidebarModule.forRoot(),
     HttpClientModule,
     HttpModule,
+    AppRoutingModule,
   ],
   providers: [
     GameScheduleService,
