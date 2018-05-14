@@ -8,6 +8,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MapComponent } from './map/map.component';
 import { ContentViewComponent } from './content-view/content-view.component';
 import { GameScheduleService } from './game-schedule.service';
+import { RedLineTrackerService } from './red-line-tracker.service';
+import { HttpClientModule } from '@angular/common/http';
+import { Http, HttpModule } from '@angular/http';
 
 
 
@@ -22,8 +25,13 @@ import { GameScheduleService } from './game-schedule.service';
   imports: [
     BrowserModule,
     SidebarModule.forRoot(),
+    HttpClientModule,
+    HttpModule,
   ],
-  providers: [GameScheduleService],
+  providers: [
+    GameScheduleService,
+    RedLineTrackerService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
