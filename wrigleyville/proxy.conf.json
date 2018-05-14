@@ -1,0 +1,9 @@
+{
+  "/ctattproxy/*": {
+    "target": "http://lapi.transitchicago.com",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": {"^/ctattproxy" : ""}
+  }
+}
