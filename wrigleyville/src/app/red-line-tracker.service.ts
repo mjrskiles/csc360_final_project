@@ -21,7 +21,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class RedLineTrackerService {
 
-// Sample request: http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=221cf8612b8943edaca50ed47826e424&mapid=40380&max=5&outputType=JSON
+// Sample request: http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx?key=221cf8612b8943edaca50ed47826e424&mapid=41420&max=4&outputType=JSON
 
   private trainsUrl = '/ctattproxy/api/1.0/ttarrivals.aspx';
   private apiKey = '221cf8612b8943edaca50ed47826e424'
