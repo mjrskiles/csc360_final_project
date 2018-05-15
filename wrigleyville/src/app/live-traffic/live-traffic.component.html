@@ -1,0 +1,5 @@
+<span>
+  <app-map class="map"></app-map>
+  <button class="sidebar_control" (click)="_toggleSidebar()">Toggle sidebar</button>
+</span>
+<div *ngIf="redLineArrivals">{{redLineArrivals["ctatt"]["eta"][0]["stpDe"]}} Arrival: {{redLineArrivals["ctatt"]["eta"][0]["arrT"]}}</div>

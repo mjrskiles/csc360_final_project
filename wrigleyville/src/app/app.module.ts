@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { Http, HttpModule } from '@angular/http';
 import { TrendsComponent } from './trends/trends.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { LiveTrafficComponent } from './live-traffic/live-traffic.component';
 
 
 
@@ -24,6 +25,7 @@ import { AppRoutingModule } from './/app-routing.module';
     MapComponent,
     ContentViewComponent,
     TrendsComponent,
+    LiveTrafficComponent,
   ],
   imports: [
     BrowserModule,
