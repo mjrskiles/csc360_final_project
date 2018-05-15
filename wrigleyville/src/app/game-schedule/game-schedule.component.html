@@ -1,3 +1,13 @@
-<ul>
-  <li *ngFor="let game of schedule">{{game}}</li>
-</ul>
+<div>
+  <div *ngFor="let game of schedule" class="game">
+    <div>
+      <div class="date">
+        <div id="day">{{game["date"]}}</div>
+        <div id="time">{{game["time"]}}</div>
+      </div>
+    </div>
+    <div class="opponent">
+      <div>{{game["isHomeGame"] ? 'vs' : '@'}} {{game["opponent"]}}</div>  
+    </div>
+  </div>
+</div>

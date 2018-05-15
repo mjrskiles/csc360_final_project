@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarModule } from 'ng-sidebar';
 import { GameScheduleService } from '../game-schedule.service';
+import { GameInfo } from '../GameInfo';
 
 @Component({
   selector: 'app-game-schedule',
@@ -9,12 +10,12 @@ import { GameScheduleService } from '../game-schedule.service';
 })
 export class GameScheduleComponent implements OnInit {
 
-  private schedule: string[]
+  private schedule: GameInfo[];
 
   constructor(private gameScheduleService: GameScheduleService) { }
 
   ngOnInit() {
-    this.getSchedule()
+    this.getSchedule();
   }
 
   getSchedule() {

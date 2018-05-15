@@ -1,3 +1,8 @@
-<p>
-  transit-tracker works!
-</p>
+<div class="container">
+  <div id="red-line-title">Red Line Arrivals</div>
+  <div *ngFor="let arrival of arrivals" class="arrival">
+    <div class="destination">{{arrival["destination"]}}</div>
+    <div class="arrTime">{{arrival["arrivalTime"]}}</div>
+  </div>
+</div>
+
