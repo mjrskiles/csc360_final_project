@@ -1,11 +1,15 @@
 <div>
-  <div class="navbar">
+  <span class="navbar">
       <img src="../assets/cubs-logo.png" width="100" height="100">
-  </div>
-  <nav class="navbar">
-      <h1>{{title}}</h1>
-      <a href="#placeholder">Live Traffic</a>
-      <a routerLink="/trends">Trends</a>
-      <a href="#placeholder">My Schedule</a>
-  </nav>
+  </span>
+  <span class="navbar">
+    <nav>    
+        <a routerLink='' id="title">{{title}}</a>    
+        <span class="directory">
+            <a routerLink="/livetraffic">LIVE TRAFFIC</a>
+            <a routerLink="/trends">TRENDS</a>
+            <a routerLink="#placeholder">MY SCHEDULE</a>
+        </span>
+    </nav>
+  </span>
 </div>

@@ -1,38 +1,38 @@
 :host {
   display: block;
-  background-color: rgb(178, 185, 199)
+  background-color: rgb(14, 51, 134)
 }
 
 img {
   margin-left: 25px;
 }
 
-h1 {
+#title {
   font-size: 2em;
-  color: #039be5;
   align-content: center;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-nav a {
-  padding: 5px 10px;
+a {
+  color: white;
   text-decoration: none;
-  display: inline-block;
-  background-color: #eee;
 }
 
-nav a:visited, a:link {
-  color: #039be5;
+.directory {
+  margin-left: 10px;
 }
 
-nav a:hover {
-  color: #607D8B;
-  background-color: #CFD8DC;
+.directory a {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-nav a.active {
-  color: #039be5;
+.directory a:hover {
+  color: rgb(187, 207, 255);
 }
 
 .navbar {
   display: inline-block;
+  vertical-align: middle;
 }
