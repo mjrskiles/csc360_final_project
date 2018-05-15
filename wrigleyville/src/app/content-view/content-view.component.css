@@ -8,8 +8,7 @@ ng-sidebar a {
   display: inline-block;
   background-color: #eee;
 }
-
-.map {
+ng-sidebar-content {
   margin-left: 130px;
 }
 

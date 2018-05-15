@@ -14,6 +14,7 @@ import { Http, HttpModule } from '@angular/http';
 import { TrendsComponent } from './trends/trends.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LiveTrafficComponent } from './live-traffic/live-traffic.component';
+import { TransitTrackerComponent } from './transit-tracker/transit-tracker.component';
 
 
 
@@ -26,6 +27,7 @@ import { LiveTrafficComponent } from './live-traffic/live-traffic.component';
     ContentViewComponent,
     TrendsComponent,
     LiveTrafficComponent,
+    TransitTrackerComponent,
   ],
   imports: [
     BrowserModule,
