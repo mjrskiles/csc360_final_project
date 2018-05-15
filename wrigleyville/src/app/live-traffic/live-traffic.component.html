@@ -1,5 +1,8 @@
-<span>
-  <app-map class="map"></app-map>
-  <button class="sidebar_control" (click)="_toggleSidebar()">Toggle sidebar</button>
-</span>
+<div class="map">
+  <app-map></app-map>
+</div>
+<div class="transit">
+  <app-transit-tracker></app-transit-tracker>
+</div>
+
 <div *ngIf="redLineArrivals">{{redLineArrivals["ctatt"]["eta"][0]["stpDe"]}} Arrival: {{redLineArrivals["ctatt"]["eta"][0]["arrT"]}}</div>
