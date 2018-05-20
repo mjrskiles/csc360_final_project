@@ -1,6 +1,6 @@
 export interface GameInfo {
   date: string
   time: string
-  opponent: string
+  description: string
   isHomeGame: boolean
 }
