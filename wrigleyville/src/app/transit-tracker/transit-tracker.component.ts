@@ -10,6 +10,9 @@ import { TrainTrackerResponse } from '../TrainTrackerResponse';
 })
 export class TransitTrackerComponent implements OnInit {
 
+  // Constants
+  private UPDATE_RATE: number = 30; //Hz
+
   private ttResponse: TrainTrackerResponse;
   arrivals: TrainETA[];
 
@@ -19,12 +22,16 @@ export class TransitTrackerComponent implements OnInit {
 
   ngOnInit() {
     this.getRedlineArrivals();
+
+    // Using an arrow function to correctly bind 'this'
+    setInterval( () => this.getRedlineArrivals(), this.UPDATE_RATE * 1000);
   }
 
-  getRedlineArrivals() {
+  getRedlineArrivals(): void {
     this.redLineTrackerService.getNextArrivals().subscribe(response => {
-      console.log("Received a Train Tracker response.");
-      console.log(JSON.stringify(response));
+      const now = new Date();
+      console.log(`Refreshed train arrival times at ${now.toLocaleTimeString()}.`);
+      // console.log(JSON.stringify(response));
 
       // Strip out only the information we need and save it
       const etas = response["ctatt"] ? response["ctatt"]["eta"] : [];
