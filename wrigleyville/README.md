@@ -9,6 +9,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 This project must be run with the command `ng serve --proxy-config proxy.conf.json` at the moment. The reason is we are using a proxy redirect
 to avoid a CORS issue with the CTA Train Tracker service until we have some backend services.
 
+The easiest way to run the project is `npm start`
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding

@@ -15,6 +15,7 @@ import { TrendsComponent } from './trends/trends.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LiveTrafficComponent } from './live-traffic/live-traffic.component';
 import { TransitTrackerComponent } from './transit-tracker/transit-tracker.component';
+import { ArrivalTimePipe } from './arrival-time.pipe';
 
 
 
@@ -28,6 +29,7 @@ import { TransitTrackerComponent } from './transit-tracker/transit-tracker.compo
     TrendsComponent,
     LiveTrafficComponent,
     TransitTrackerComponent,
+    ArrivalTimePipe,
   ],
   imports: [
     BrowserModule,

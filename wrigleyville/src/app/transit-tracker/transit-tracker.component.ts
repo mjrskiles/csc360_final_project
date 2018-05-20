@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RedLineTrackerService } from '../red-line-tracker.service';
 import { TrainETA } from '../TrainETA';
+import { TrainTrackerResponse } from '../TrainTrackerResponse';
 
 @Component({
   selector: 'app-transit-tracker',
@@ -9,29 +10,24 @@ import { TrainETA } from '../TrainETA';
 })
 export class TransitTrackerComponent implements OnInit {
 
-  arrivals: TrainETA[] = [
-    {
-      destination: '95th/Dan Ryan',
-      arrivalTime: '4 min'
-    },
-    {
-      destination: 'Howard',
-      arrivalTime: '6 min'
-    },
-    {
-      destination: 'Howard',
-      arrivalTime: '10 min'
-    },
-    {
-      destination: '95th/Dan Ryan',
-      arrivalTime: '12 min'
-    }
-  ]
+  private ttResponse: TrainTrackerResponse;
+  arrivals: TrainETA[];
 
   constructor(
     private redLineTrackerService: RedLineTrackerService
   ) { }
 
   ngOnInit() {}
+
+  getRedlineArrivals() {
+    this.redLineTrackerService.getNextArrivals().subscribe(response => {
+      console.log("Received a Train Tracker response.");
+      console.log(JSON.stringify(response));
+
+      // Strip out only the information we need and save it
+      const arrivals = response["ctatt"] ? response["ctatt"]["eta"] : [];
+      this.arrivals = arrivals;
+    });
+  }
 
 }
