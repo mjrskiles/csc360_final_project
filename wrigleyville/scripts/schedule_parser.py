@@ -63,9 +63,11 @@ def parse_schedule(filename):
     isHomeGame = False
     if 'Wrigley' in location:
       isHomeGame = True
-    
-    json = '{ date: "' + values[date_index] + '", time: "' + values[time_index] + '", description: "' + values[subject_index] + '", isHomeGame: ' + str(isHomeGame) + ' }'
-    print(json)
+
+    gameDict = { 'date': values[date_index], 'time':values[time_index], 'description': values[subject_index], 'isHomeGame':isHomeGame}
+    j = json.dumps(gameDict)
+    print(j)
+    # print(json.dumps(gameDict, sort_keys=False, indent=2))
     line = f.readline()
 
 if __name__ == '__main__':
