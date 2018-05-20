@@ -17,7 +17,9 @@ export class TransitTrackerComponent implements OnInit {
     private redLineTrackerService: RedLineTrackerService
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getRedlineArrivals();
+  }
 
   getRedlineArrivals() {
     this.redLineTrackerService.getNextArrivals().subscribe(response => {
@@ -25,7 +27,16 @@ export class TransitTrackerComponent implements OnInit {
       console.log(JSON.stringify(response));
 
       // Strip out only the information we need and save it
-      const arrivals = response["ctatt"] ? response["ctatt"]["eta"] : [];
+      const etas = response["ctatt"] ? response["ctatt"]["eta"] : [];
+
+      let arrivals: TrainETA[] = []
+      etas.forEach(eta => {
+        arrivals.push({
+          destination: eta["destNm"],
+          arrivalTime: eta["arrT"]
+        })
+      });
+
       this.arrivals = arrivals;
     });
   }
