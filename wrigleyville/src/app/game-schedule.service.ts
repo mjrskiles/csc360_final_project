@@ -10,31 +10,31 @@ export class GameScheduleService {
     {
       date: "5/1/18",
       time: "6:00 PM",
-      opponent: "Cardinals",
+      description: "Cardinals",
       isHomeGame: true
     },
     {
       date: "5/2/18",
       time: "5:30 PM",
-      opponent: "Cardinals",
+      description: "Cardinals",
       isHomeGame: true
     },
     {
       date: "5/5/18",
       time: "2:30 PM",
-      opponent: "Mets",
+      description: "Mets",
       isHomeGame: false
     },
     {
       date: "5/7/18",
       time: "6:00 PM",
-      opponent: "Mets",
+      description: "Mets",
       isHomeGame: true
     },
     {
       date: "5/10/18",
       time: "6:00 PM",
-      opponent: "White Sox",
+      description: "White Sox",
       isHomeGame: true
     }
   ]

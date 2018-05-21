@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { RedLineTrackerService } from '../red-line-tracker.service';
-import { TrainTrackerResponse } from '../TrainTrackerResponse';
 
 @Component({
   selector: 'app-content-view',
@@ -9,14 +7,9 @@ import { TrainTrackerResponse } from '../TrainTrackerResponse';
 })
 export class ContentViewComponent implements OnInit {
 
-  redLineArrivals: TrainTrackerResponse
-  request: string
-
-  constructor(private redLineTrackerService: RedLineTrackerService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.redLineTrackerService.getNextArrivals().subscribe(response => this.redLineArrivals = response);
-    this.request = this.redLineTrackerService.getLastRequest()
   }
 
   private _opened: boolean = true;
