@@ -15,6 +15,8 @@ import { TrendsComponent } from './trends/trends.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LiveTrafficComponent } from './live-traffic/live-traffic.component';
 import { TransitTrackerComponent } from './transit-tracker/transit-tracker.component';
+import { TrafficCongestionComponent } from './traffic-congestion/traffic-congestion.component';
+import { traffic_service } from './traffic.service';
 
 
 
@@ -28,6 +30,7 @@ import { TransitTrackerComponent } from './transit-tracker/transit-tracker.compo
     TrendsComponent,
     LiveTrafficComponent,
     TransitTrackerComponent,
+    TrafficCongestionComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { TransitTrackerComponent } from './transit-tracker/transit-tracker.compo
     AppRoutingModule,
   ],
   providers: [
+    traffic_service,
     GameScheduleService,
     RedLineTrackerService,
   ],
