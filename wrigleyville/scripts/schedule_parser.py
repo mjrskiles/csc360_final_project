@@ -55,6 +55,8 @@ def parse_schedule(filename):
       print("Didn't parse the column indexes properly.")
       sys.exit(1)
   
+  games = []
+
   line = f.readline()
   while line:
     values = line.split(",")
@@ -65,10 +67,13 @@ def parse_schedule(filename):
       isHomeGame = True
 
     gameDict = { 'date': values[date_index], 'time':values[time_index], 'description': values[subject_index], 'isHomeGame':isHomeGame}
-    j = json.dumps(gameDict)
-    print(j)
+    games.append(gameDict)
     # print(json.dumps(gameDict, sort_keys=False, indent=2))
     line = f.readline()
+
+  outfile = open("cubs-schedule-2018.json", "w")
+  outfile.write(json.dumps(games, sort_keys=False, indent=2))
+  outfile.close()
 
 if __name__ == '__main__':
   filename = parse_args()
