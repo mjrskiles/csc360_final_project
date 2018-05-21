@@ -19,6 +19,8 @@ import { ContentViewComponent } from './content-view/content-view.component';
 import { TrendsComponent } from './trends/trends.component';
 import { LiveTrafficComponent } from './live-traffic/live-traffic.component';
 import { TransitTrackerComponent } from './transit-tracker/transit-tracker.component';
+import { TrafficCongestionComponent } from './traffic-congestion/traffic-congestion.component';
+import { traffic_service } from './traffic.service';
 
 // Services
 import { GameScheduleService } from './game-schedule.service';
@@ -37,7 +39,11 @@ import { ArrivalTimePipe } from './arrival-time.pipe';
     TrendsComponent,
     LiveTrafficComponent,
     TransitTrackerComponent,
+
+    TrafficCongestionComponent,
+
     ArrivalTimePipe,
+
   ],
   imports: [
     BrowserModule,
@@ -48,6 +54,7 @@ import { ArrivalTimePipe } from './arrival-time.pipe';
     AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [
+    traffic_service,
     GameScheduleService,
     RedLineTrackerService,
   ],
