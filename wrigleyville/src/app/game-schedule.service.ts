@@ -2,42 +2,11 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { from } from 'rxjs/observable/from';
 import { GameInfo } from './GameInfo';
+import { games } from './games';
 
 @Injectable()
 export class GameScheduleService {
-
-  private games = [
-    {
-      date: "5/1/18",
-      time: "6:00 PM",
-      description: "Cardinals",
-      isHomeGame: true
-    },
-    {
-      date: "5/2/18",
-      time: "5:30 PM",
-      description: "Cardinals",
-      isHomeGame: true
-    },
-    {
-      date: "5/5/18",
-      time: "2:30 PM",
-      description: "Mets",
-      isHomeGame: false
-    },
-    {
-      date: "5/7/18",
-      time: "6:00 PM",
-      description: "Mets",
-      isHomeGame: true
-    },
-    {
-      date: "5/10/18",
-      time: "6:00 PM",
-      description: "White Sox",
-      isHomeGame: true
-    }
-  ]
+  private games = games;
 
   constructor() { }
 
