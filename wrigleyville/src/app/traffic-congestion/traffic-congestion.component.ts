@@ -23,30 +23,45 @@ export class TrafficCongestionComponent implements OnInit{
     this._tracker_service.getData().subscribe(
       response => {this.speeds = response}, 
       err => console.log(err),
-      () => console.log(this.speeds)
+      () => console.log(this.speeds.RWS[0].RW[0])
     );
   }
 
   formatData(){
-    console.log(this.speeds)
-    //let node0_0 = this.speeds["RWS"][0]["RW"][0]["FIS"][0]["FI"][0]["CF"][0]["SP"];
-    /*
-		let node0_1 = this.speeds["RWS"][0]["RW"][0]["FIS"][0]["FI"][1]["CF"][0]["SP"];
-		let node0_2 = this.speeds["RWS"][0]["RW"][0]["FIS"][0]["FI"][2]["CF"][0]["SP"];
-		let node1_0 = this.speeds["RWS"][0]["RW"][1]["FIS"][0]["FI"][0]["CF"][0]["SP"];
-	  let node1_1 = this.speeds["RWS"][0]["RW"][1]["FIS"][0]["FI"][1]["CF"][0]["SP"];
-		let node1_2 = this.speeds["RWS"][0]["RW"][1]["FIS"][0]["FI"][2]["CF"][0]["SP"];
-		let node2_0 = this.speeds["RWS"][0]["RW"][2]["FIS"][0]["FI"][0]["CF"][0]["SP"];
-		let node3_0 = this.speeds["RWS"][0]["RW"][3]["FIS"][0]["FI"][0]["CF"][0]["SP"];
-		let node12_0 = this.speeds["RWS"][0]["RW"][12]["FIS"][0]["FI"][0]["CF"][0]["SP"];
-	  let node12_1 = this.speeds["RWS"][0]["RW"][12]["FIS"][0]["FI"][1]["CF"][0]["SP"];
-		let node13_1 = this.speeds["RWS"][0]["RW"][13]["FIS"][0]["FI"][1]["CF"][0]["SP"];
-    let node13_2 = this.speeds["RWS"][0]["RW"][13]["FIS"][0]["FI"][2]["CF"][0]["SP"];
-    let node14_1 = this.speeds["RWS"][0]["RW"][14]["FIS"][0]["FI"][1]["CF"][0]["SP"];
-    */
+    let a = this.speeds.RWS[0].RW[0].FIS[0].FI[0].CF[0].SP;
+		let b = this.speeds.RWS[0].RW[0].FIS[0].FI[1].CF[0].SP;
+		let c = this.speeds.RWS[0].RW[0].FIS[0].FI[2].CF[0].SP;
+		let d = this.speeds.RWS[0].RW[1].FIS[0].FI[0].CF[0].SP;
+	  let e = this.speeds.RWS[0].RW[1].FIS[0].FI[1].CF[0].SP;
+		let f = this.speeds.RWS[0].RW[1].FIS[0].FI[2].CF[0].SP;
+		let g = this.speeds.RWS[0].RW[2].FIS[0].FI[0].CF[0].SP;
+		let h = this.speeds.RWS[0].RW[3].FIS[0].FI[0].CF[0].SP;
+		let i = this.speeds.RWS[0].RW[12].FIS[0].FI[0].CF[0].SP;
+	  let j = this.speeds.RWS[0].RW[12].FIS[0].FI[1].CF[0].SP;
+		let k = this.speeds.RWS[0].RW[13].FIS[0].FI[1].CF[0].SP;
+    let l = this.speeds.RWS[0].RW[13].FIS[0].FI[2].CF[0].SP;
+    let m = this.speeds.RWS[0].RW[14].FIS[0].FI[1].CF[0].SP;
     
-    let test = "Please Work"
-    return (test) 
+    let list: number[] = [a,b,c,d,e,f,g,h,i,j,k,l,m];
+    return list 
+  }
+
+  setMyStyles(p) {
+    let styles = {};
+    if(p < 5) {
+      styles = {
+        'background-color':'red'
+      };
+    }else if(p >= 5 && p < 10) {
+      styles = {
+        'background-color':'yellow'
+      };
+    } else {
+      styles = {
+        'background-color':'green'
+      };
+    }
+    return styles
   }
   
 
