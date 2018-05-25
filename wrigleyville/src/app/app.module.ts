@@ -8,7 +8,11 @@ import { AppRoutingModule } from './/app-routing.module';
 // Firebase
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireAuth } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
+
 
 // Components
 import { AppComponent } from './app.component';
@@ -52,6 +56,8 @@ import { ArrivalTimePipe } from './arrival-time.pipe';
     HttpModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule,
   ],
   providers: [
     traffic_service,
