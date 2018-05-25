@@ -1,4 +1,4 @@
-<div *ngFor="let game of schedule" class="game">
+<div *ngFor="let game of schedule | async" class="game">
   <div>
     <div class="date">
       <div id="day">{{game["date"]}}</div>
