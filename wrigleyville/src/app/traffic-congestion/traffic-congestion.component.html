@@ -1,3 +1,94 @@
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 5px solid black;
+    }
+    
+    th, td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid black;
+    }
+    th {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    }
+</style>
+
+<!--tr:nth-child(even) {background-color: #f2f2f2;}-->
+
 <div>
-  <h2>{{speeds['RWS'][0]}}</h2>
+    <table style="width:75%">
+        <tr>          
+          <th>Intersection</th>
+          <th>Direction</th> 
+          <th>Speed (MPH)</th>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[0].FIS[0].FI[0].CF[0].SP)" >
+          <td>Addison/Halstead</td>
+          <td>North</td> 
+          <td>{{speeds.RWS[0].RW[0].FIS[0].FI[0].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[1].FIS[0].FI[2].CF[0].SP)">
+          <td>Addison/Halstead</td>
+          <td>South</td> 
+          <td id = "3">{{speeds.RWS[0].RW[1].FIS[0].FI[2].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[0].FIS[0].FI[1].CF[0].SP)">
+          <td>Addison/Clark</td>
+          <td>North</td> 
+          <td id = "4">{{speeds.RWS[0].RW[0].FIS[0].FI[1].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[1].FIS[0].FI[1].CF[0].SP)">
+          <td>Addison/Clark</td>
+          <td>South</td> 
+          <td id = "4">{{speeds.RWS[0].RW[1].FIS[0].FI[1].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[0].FIS[0].FI[2].CF[0].SP)">
+          <td>Addison/Racine</td>
+          <td>North</td> 
+          <td id = "6">{{speeds.RWS[0].RW[0].FIS[0].FI[2].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[1].FIS[0].FI[0].CF[0].SP)">
+          <td>Addison/Racine</td>
+          <td>South</td> 
+          <td id = "7">{{speeds.RWS[0].RW[1].FIS[0].FI[0].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[2].FIS[0].FI[0].CF[0].SP)">
+          <td>Clark/Addison</td>
+          <td>North</td> 
+          <td id = "8">{{speeds.RWS[0].RW[2].FIS[0].FI[0].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[3].FIS[0].FI[0].CF[0].SP)">
+          <td>Clark/Addison</td>
+          <td>South</td> 
+          <td id = "9">{{speeds.RWS[0].RW[3].FIS[0].FI[0].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[12].FIS[0].FI[0].CF[0].SP)">
+          <td>Sheffield/Clark</td>
+          <td>East</td> 
+          <td id = "10">{{speeds.RWS[0].RW[12].FIS[0].FI[0].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[12].FIS[0].FI[1].CF[0].SP)">
+          <td>Sheffield/Clark</td>
+          <td>West</td> 
+          <td id = "11">{{speeds.RWS[0].RW[12].FIS[0].FI[1].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[13].FIS[0].FI[1].CF[0].SP)">
+          <td>Sheffield/Addison</td>
+          <td>North</td> 
+          <td id = "12">{{speeds.RWS[0].RW[13].FIS[0].FI[1].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[13].FIS[0].FI[2].CF[0].SP)">
+          <td>Sheffield/Addison</td>
+          <td>South</td> 
+          <td id = "13">{{speeds.RWS[0].RW[13].FIS[0].FI[2].CF[0].SP}}</td>
+        </tr>
+        <tr [ngStyle]="setMyStyles(speeds.RWS[0].RW[14].FIS[0].FI[1].CF[0].SP)"> 
+          <td>Rosco/Sheffield</td>
+          <td>North</td> 
+          <td id = "14">{{speeds.RWS[0].RW[14].FIS[0].FI[1].CF[0].SP}}</td>
+        </tr>
+      </table>
 </div>
