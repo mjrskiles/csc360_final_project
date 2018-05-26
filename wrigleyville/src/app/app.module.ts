@@ -29,7 +29,12 @@ import { RedLineTrackerService } from './red-line-tracker.service';
 // Pipes
 import { ArrivalTimePipe } from './arrival-time.pipe';
 
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+
 @NgModule({
+  exports: [
+    HttpModule
+  ],
   declarations: [
     AppComponent,
     GameScheduleComponent,
@@ -40,12 +45,14 @@ import { ArrivalTimePipe } from './arrival-time.pipe';
     LiveTrafficComponent,
     TransitTrackerComponent,
 
+
     TrafficCongestionComponent,
 
     ArrivalTimePipe,
 
   ],
   imports: [
+    Ng2GoogleChartsModule,
     BrowserModule,
     SidebarModule.forRoot(),
     HttpClientModule,

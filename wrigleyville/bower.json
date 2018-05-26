@@ -1,0 +1,20 @@
+{
+  "name": "wrigleyville",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Jake <jgdremann@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/mjrskiles/csc360_final_project",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-google-chart": "1.0.0-beta.1"
+  }
+}
