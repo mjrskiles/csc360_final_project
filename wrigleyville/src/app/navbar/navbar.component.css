@@ -1,38 +1,8 @@
-:host {
-  display: block;
+/* :host {
+  
   background-color: rgb(14, 51, 134)
-}
+} */
 
-img {
-  margin-left: 25px;
-}
-
-#title {
-  font-size: 2em;
-  align-content: center;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-.directory {
-  margin-left: 10px;
-}
-
-.directory a {
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.directory a:hover {
-  color: rgb(187, 207, 255);
-}
-
-.navbar {
-  display: inline-block;
-  vertical-align: middle;
+.bg-dark {
+  background-color: rgb(14, 51, 134)!important;
 }

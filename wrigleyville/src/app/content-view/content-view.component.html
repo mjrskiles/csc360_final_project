@@ -7,14 +7,36 @@
   [position]="_position"
   [showBackdrop]="_showBackdrop"
   [sidebarClass]="'schedule-sidebar'">
-    <a closeSidebar>Closes the sidebar</a>
-    <app-game-schedule></app-game-schedule>
+    <a closeSidebar class="closeSidebar">></a>
+    <div class="space"></div>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/livetraffic">Live Traffic</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/trends">Trends</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/transit">Transit</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/schedule">Cubs Schedule</a>
+        </li>
+      </ul>
   </ng-sidebar>
 
   <!-- Page content -->
   <div ng-sidebar-content>
-    <router-outlet></router-outlet>
-    <app-traffic-congestion></app-traffic-congestion>
-    <button class="sidebar_control" (click)="_toggleSidebar()">Toggle sidebar</button>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <img src="../assets/cubs-logo.png" width="64" height="64">
+        <a class="navbar-brand" routerLink="/livetraffic">Wrigleyville Traffic</a>
+        <button class="navbar-toggler" type="button" (click)="_toggleSidebar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <img src="../assets/round-account_circle-24px.svg" width="64" height="64"> -->
+    </nav>
+    <div class="content">
+      <router-outlet class="container content"></router-outlet>
+    </div>
   </div>
 </ng-sidebar-container>

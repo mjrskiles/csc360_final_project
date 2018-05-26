@@ -2,13 +2,21 @@ ng-sidebar-container {
   height: 100vh;
 }
 
-ng-sidebar a {
+.content {
+  padding-top: 60px;
+}
+
+.space {
+  height: 10px;
+  width: 75%;
+}
+
+.closeSidebar {
   padding: 5px 10px;
   text-decoration: none;
-  display: inline-block;
   background-color: #eee;
 }
 
-.sidebar_control {
-  float: right;
+.bg-dark {
+  background-color: rgb(14, 51, 134)!important;
 }
