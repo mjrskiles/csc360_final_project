@@ -71,8 +71,9 @@ def parse_schedule(filename):
     # print(json.dumps(gameDict, sort_keys=False, indent=2))
     line = f.readline()
 
+  games_json = { "cubs-games": games }
   outfile = open("cubs-schedule-2018.json", "w")
-  outfile.write(json.dumps(games, sort_keys=False, indent=2))
+  outfile.write(json.dumps(games_json, sort_keys=False, indent=2))
   outfile.close()
 
 if __name__ == '__main__':
