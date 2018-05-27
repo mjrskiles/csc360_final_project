@@ -1,0 +1,20 @@
+<div *ngIf="user">
+
+    <h2>{{ user.password | uppercase }} Details</h2>
+    <div>    
+      <label>email:
+        <input [(ngModel)]="user.email" placeholder="email">
+      </label>
+    </div>
+    <div>
+      <label>password:
+        <input [(ngModel)]="user.password" placeholder="password">
+      </label>
+    </div>
+    <div>
+        <label>alertLevel:
+          <input [(ngModel)]="user.alertLevel" placeholder="alertLevel">
+        </label>
+      </div>
+    
+  </div>
