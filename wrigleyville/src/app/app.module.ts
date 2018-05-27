@@ -42,7 +42,12 @@ import { SignupComponent } from './signup/signup.component';
 import { MembersComponent } from './members/members.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+
 @NgModule({
+  exports: [
+    HttpModule
+  ],
   declarations: [
     AppComponent,
     GameScheduleComponent,
@@ -52,6 +57,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     TrendsComponent,
     LiveTrafficComponent,
     TransitTrackerComponent,
+
 
     TrafficCongestionComponent,
 
@@ -69,6 +75,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
   ],
   imports: [
+    Ng2GoogleChartsModule,
     BrowserModule,
     FormsModule,
     SidebarModule.forRoot(),
