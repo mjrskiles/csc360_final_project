@@ -15,6 +15,7 @@ body {
   MS 5/3/18
 */
 .schedule-sidebar {
-  background-color: lightblue;
+  background-color: aliceblue;
   padding: 2em 0.5em;
+  width: 60%;
 }
