@@ -1,0 +1,20 @@
+.content {
+    padding-top: 60px;
+  }
+  
+  .space {
+    height: 10px;
+    width: 75%;
+  }
+  
+  .closeSidebar {
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: #eee;
+  }
+  
+  .bg-dark {
+    background-color: rgb(14, 51, 134)!important;
+  }
+
+  
