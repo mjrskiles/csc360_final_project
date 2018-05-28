@@ -1,5 +1,4 @@
 <!-- Container for sidebar(s) + page content -->
-<app-current-user></app-current-user>
 <ng-sidebar-container>
 
   <!-- A sidebar -->
@@ -8,24 +7,36 @@
   [position]="_position"
   [showBackdrop]="_showBackdrop"
   [sidebarClass]="'schedule-sidebar'"
-  [closeOnClickOutside]="_closeOnClickOutside">
+  [closeOnClickOutside]="_closeOnClickOutside"
+  [autoFocus]="_autoFocusFirstElement">
     <a closeSidebar class="closeSidebar">></a>
-    <div class="space"></div>
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/login">Log in</a>
+          <app-current-user></app-current-user>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/livetraffic">Live Traffic</a>
+          <a class="nav-link" routerLink="/livetraffic">
+            <object class="align-middle link-icon" data="../../assets/round-traffic-24px.svg" type="image/svg+xml" width="40px"></object>
+            <span class="align-middle">LIVE TRAFFIC</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/trends">Trends</a>
+          <a class="nav-link" routerLink="/trends">
+            <object class="align-middle link-icon" data="../../assets/round-trending_up-24px.svg" type="image/svg+xml" width="40px"></object>
+            <span class="align-middle">TRENDS</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/transit">Transit</a>
+          <a class="nav-link" routerLink="/transit">
+            <object class="align-middle link-icon" data="../../assets/round-directions_transit-24px.svg" type="image/svg+xml" width="40px"></object>
+            <span class="align-middle">TRANSIT</span>
+          </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="/schedule">Cubs Schedule</a>
+          <a class="nav-link" routerLink="/schedule">
+            <object class="align-middle link-icon" data="../../assets/round-calendar_today-24px.svg" type="image/svg+xml" width="40px"></object>
+            <span class="align-middle">CUBS SCHEDULE</span>
+          </a>
         </li>
       </ul>
   </ng-sidebar>

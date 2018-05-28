@@ -19,3 +19,7 @@ body {
   padding: 2em 0.5em;
   width: 60%;
 }
+
+path {
+  fill: red;
+}

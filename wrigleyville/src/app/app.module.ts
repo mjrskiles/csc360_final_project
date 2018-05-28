@@ -37,7 +37,6 @@ import { AuthService } from './services/auth.service';
 // Pipes
 import { ArrivalTimePipe } from './arrival-time.pipe';
 import { LoginComponent } from './login/login.component';
-import { EmailComponent } from './email/email.component';
 import { SignupComponent } from './signup/signup.component';
 import { MembersComponent } from './members/members.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -58,24 +57,13 @@ import { CurrentUserComponent } from './current-user/current-user.component';
     TrendsComponent,
     LiveTrafficComponent,
     TransitTrackerComponent,
-
-
     TrafficCongestionComponent,
-
     ArrivalTimePipe,
-
     LoginComponent,
-
-    EmailComponent,
-
     SignupComponent,
-
     MembersComponent,
-
     DashboardComponent,
-
     CurrentUserComponent,
-
   ],
   imports: [
     Ng2GoogleChartsModule,

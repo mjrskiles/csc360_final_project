@@ -2,13 +2,8 @@ ng-sidebar-container {
   height: 100vh;
 }
 
-.content {
-  padding-top: 60px;
-}
-
-.space {
-  height: 10px;
-  width: 75%;
+.link-icon {
+  padding-right: 10px;
 }
 
 .closeSidebar {
