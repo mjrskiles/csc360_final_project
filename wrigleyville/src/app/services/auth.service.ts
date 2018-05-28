@@ -5,54 +5,71 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { Observable } from 'rxjs/Observable';
 import { firebase } from '@firebase/app';
 
-//import {User} from '@firebase/auth'
+import {User} from 'firebase'
+
 
 @Injectable()
 export class AuthService 
 {
-  //private user: Observable<firebase.User>;
-  //private userDetails: firebase.User = null;
-
-  // private user: Observable<firebase.User>;
-  // private userDetails: firebase.User = null;
+  private user: Observable<User>;
+  private userDetails: User = null;
+  private name: string = null;
 
   constructor(private _firebaseAuth: AngularFireAuth, 
               private router: Router) 
   { 
-    //this.user = _firebaseAuth.authState;
-    // this.user.subscribe(
-    //   (user) => {
-    //     if (user) {
-    //       this.userDetails = user;
-    //       console.log(this.userDetails);
-    //     }
-    //     else {
-    //       this.userDetails = null;
-    //     }
-    //   }
-    // );
+    this.user = _firebaseAuth.authState;
+    this.user.subscribe(
+      (user) => 
+      {
+        //if (user) {
+          this.userDetails = user;
+          console.log(this.userDetails);
+          this.name = this.userDetails.displayName;
+          console.log(this.name);
+
+        // }
+        // else {
+        //   this.userDetails = null;
+        // }
+      }
+    );
   }
 
   signInWithGoogle() 
   {
+    console.log("signing in");
+
     return this._firebaseAuth.auth.signInWithPopup(
-      new firebase.auth.GoogleAuthProvider())
+    new firebase.auth.GoogleAuthProvider())
+
+
+  }
+
+  GetName()
+  {
+    console.log("getting name");
+    return this.name;
   }
 
   isLoggedIn() 
   {
-    //this.router.navigate(['/dashboard'])
-    // if (this.userDetails == null ) {
-    //     return false;
-    //   } else {
-    //     return true;
-    //   }
+    console.log("checking logged in status");
+
+    if (this.userDetails == null ) 
+    {
+      console.log("no user found");
+      return false;
+    } 
+    else {
+      console.log("user found");
+      return true; 
+    }
   }
   logout() 
   {
       this._firebaseAuth.auth.signOut()
       .then((res) => this.router.navigate(['/']));
-      //.then((res) => this.router.navigate(['/dashboard']));
 
   }
 

@@ -43,6 +43,7 @@ import { MembersComponent } from './members/members.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
+import { CurrentUserComponent } from './current-user/current-user.component';
 
 @NgModule({
   exports: [
@@ -72,6 +73,8 @@ import { Ng2GoogleChartsModule } from 'ng2-google-charts';
     MembersComponent,
 
     DashboardComponent,
+
+    CurrentUserComponent,
 
   ],
   imports: [
