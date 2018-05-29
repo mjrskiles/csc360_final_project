@@ -1,8 +1,10 @@
 <div class="container">
-  <div id="red-line-title">Red Line Arrivals</div>
-  <div *ngFor="let arrival of arrivals" class="arrival">
-    <div class="destination">{{arrival["destination"]}}</div>
-    <div class="arrTime">{{arrival["arrivalTime"] | arrivalTime}}</div>
+  <div id="red-line-title">Addison Red Line Arrivals</div>
+  <div *ngFor="let arrival of arrivals" class="arrival row">
+    <!-- <div class="row"> -->
+      <div class="col-8 arrival-label">{{arrival["destination"]}}</div>
+      <div class="col-4 text-right arrival-label">{{arrival["arrivalTime"] | arrivalTime}}</div>
+    <!-- </div> -->
   </div>
 </div>
 

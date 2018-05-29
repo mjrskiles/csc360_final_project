@@ -2,14 +2,19 @@
 <ng-sidebar-container>
 
   <!-- A sidebar -->
+  <!-- Starts with ng-sidebar settings -->
   <ng-sidebar 
   [(opened)]="_opened"
   [position]="_position"
   [showBackdrop]="_showBackdrop"
-  [sidebarClass]="'schedule-sidebar'"
+  [sidebarClass]="'navigation-sidebar'"
   [closeOnClickOutside]="_closeOnClickOutside"
   [autoFocus]="_autoFocusFirstElement">
-    <a closeSidebar class="closeSidebar">></a>
+
+    <!-- This section describes the content inside the sidebar -->
+    <a closeSidebar class="nav-link closeSidebar">
+        <object data="../../assets/baseline-arrow-right-24px.svg" type="image/svg+xml" width="40px"></object>
+    </a>
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <app-current-user></app-current-user>
@@ -45,7 +50,7 @@
  
   <div ng-sidebar-content>
     <!--<nav class="navbar navbar-dark fixed-top bg-dark"> -->
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-dark bg-dark">
 
         <img src="../assets/cubs-logo.png" width="64" height="64">
         <a class="navbar-brand" routerLink="/livetraffic">Wrigleyville Traffic</a>
