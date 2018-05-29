@@ -1,19 +1,21 @@
-<select name = "Day" id = "d">
-    <option value="25">May 25</option>
-    <option value="26">May 26</option>
-</select>
-<select name = "Street" id = "street">
-    <option value='AH'>Addison/Halstead</option>
-    <option value='AC'>Addison/Clark</option>
-    <option value='AR'>Addision/Racine</option>
-    <option value='CA'>Clark/Addison</option>
-    <option value='SC'>Sheffield/Clark</option>
-    <option value='SA'>Sheffield/Addison</option>
-    <option value='RS'>Racine/Sheffield</option>
-</select>
-<select name = "Direction" id = "direction">
-    <option value="N">North</option>
-    <option value="S">South</option>
-</select>
-<button (click) = "refreshData()">Refresh</button>
-<google-chart id = "chart" [data]="pieChartData"></google-chart>
+<div>
+    <select name = "Day" id = "d">
+        <option value="25">May 25</option>
+        <option value="26">May 26</option>
+    </select>
+    <select name = "Street" id = "street">
+        <option value='AH'>Addison/Halstead</option>
+        <option value='AC'>Addison/Clark</option>
+        <option value='AR'>Addision/Racine</option>
+        <option value='CA'>Clark/Addison</option>
+        <option value='SC'>Sheffield/Clark</option>
+        <option value='SA'>Sheffield/Addison</option>
+        <option value='RS'>Racine/Sheffield</option>
+    </select>
+    <select name = "Direction" id = "direction">
+        <option value="N">North</option>
+        <option value="S">South</option>
+    </select>
+    <button (click) = "refreshData()">Refresh</button>
+    <google-chart id = "chart" [data]="pieChartData"></google-chart>
+</div>
