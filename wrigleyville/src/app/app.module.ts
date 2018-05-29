@@ -45,6 +45,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 import { CurrentUserComponent } from './current-user/current-user.component';
+import { AccordionModule } from 'ngx-bootstrap';
 
 
 @NgModule({
@@ -78,11 +79,10 @@ import { CurrentUserComponent } from './current-user/current-user.component';
     HttpClientModule,
     HttpModule,
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase, 
-      'angular-auth-firebase'),
+    AngularFireModule.initializeApp(environment.firebase, 'angular-auth-firebase'),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    
+    AccordionModule.forRoot(),
   ],
   providers: [
     traffic_service,
