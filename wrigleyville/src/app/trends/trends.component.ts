@@ -106,6 +106,7 @@ export class TrendsComponent implements OnInit {
                 };
                 break;
               }
+              break;
           case "S":
             switch(s){
               case "AH": 
@@ -171,8 +172,10 @@ export class TrendsComponent implements OnInit {
                   options: {'title': 'Daily Traffic'}
                 };
                 break;
-          }
+            } 
+            break;
         }
+        break;
         case "26": 
           switch(dir){
             case "N":
@@ -241,6 +244,7 @@ export class TrendsComponent implements OnInit {
                   };
                   break;
               }
+              break;
             case "S":
               switch(s){
                 case "AH": 
@@ -296,7 +300,7 @@ export class TrendsComponent implements OnInit {
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break;
+                  break; 
                 case "RS": 
                   this.x = RS26
                   this.x[0] = ['Time',"Speed"]
