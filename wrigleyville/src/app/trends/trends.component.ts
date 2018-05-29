@@ -106,186 +106,211 @@ export class TrendsComponent implements OnInit {
                 };
                 break;
               }
+              break;
           case "S":
-            switch(street){
-              case 1: {this.x = AHS25
+            switch(s){
+              case "AH": 
+                this.x = AHS25
                 this.x[0] = ['Time',"Speed"]
                 this.pieChartData =  {
                   chartType: 'LineChart',
                   dataTable: this.x,
                   options: {'title': 'Daily Traffic'}
                 }; 
-                break;}
-              case 2: {this.x = ACS25
+                break;
+              case "AC": 
+                this.x = ACS25
                 this.x[0] = ['Time',"Speed"]
                 this.pieChartData =  {
                   chartType: 'LineChart',
                   dataTable: this.x,
                   options: {'title': 'Daily Traffic'}
                 }; 
-                break}
-              case 3: {this.x = ARS25
+                break;
+              case "AR": 
+                this.x = ARS25
                 this.x[0] = ['Time',"Speed"]
                 this.pieChartData =  {
                   chartType: 'LineChart',
                   dataTable: this.x,
                   options: {'title': 'Daily Traffic'}
                 };
-                break}
-              case 4: {this.x = CAS25 
+                break;
+              case "CA": 
+                this.x = CAS25 
                 this.x[0] = ['Time',"Speed"]
                 this.pieChartData =  {
                   chartType: 'LineChart',
                   dataTable: this.x,
                   options: {'title': 'Daily Traffic'}
                 };
-                break}
-              case 5: {this.x = SCS25
+                break;
+              case "SC": 
+                this.x = SCS25
                 this.x[0] = ['Time',"Speed"]
                 this.pieChartData =  {
                   chartType: 'LineChart',
                   dataTable: this.x,
                   options: {'title': 'Daily Traffic'}
                 }; 
-                break}
-              case 6: {this.x = SAS25
+                break;
+              case "SA": 
+                this.x = SAS25
                 this.x[0] = ['Time',"Speed"]
                 this.pieChartData =  {
                   chartType: 'LineChart',
                   dataTable: this.x,
                   options: {'title': 'Daily Traffic'}
                 }; 
-                break}
-              case 7: {this.x = RS25 
+                break;
+              case "RS": 
+                this.x = RS25 
                 this.x[0] = ['Time',"Speed"]
                 this.pieChartData =  {
                   chartType: 'LineChart',
                   dataTable: this.x,
                   options: {'title': 'Daily Traffic'}
                 };
-                break}
-          }
+                break;
+            } 
+            break;
         }
+        break;
         case "26": 
-          switch(direction){
+          switch(dir){
             case "N":
-              switch(street){
-                case "AH": {this.x = AHN26 
+              switch(s){
+                case "AH": 
+                  this.x = AHN26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "AC": {this.x = ACN26 
+                  break;
+                case "AC": 
+                  this.x = ACN26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "AR": {this.x = ARN26
+                  break;
+                case "AR": 
+                  this.x = ARN26
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   }; 
-                  break}
-                case "CA": {this.x = CAN26 
+                  break;
+                case "CA": 
+                  this.x = CAN26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "SC": {this.x = SCN26
+                  break;
+                case "SC": 
+                  this.x = SCN26
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   }; 
-                  break}
-                case "SA": {this.x = SAN26 
+                  break;
+                case "SA": 
+                  this.x = SAN26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "RS": {this.x = RS26 
+                  break;
+                case "RS": 
+                  this.x = RS26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
+                  break;
               }
+              break;
             case "S":
-              switch(street){
-                case "AH": {this.x = AHS26 
+              switch(s){
+                case "AH": 
+                  this.x = AHS26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "AC": {this.x = ACS26 
+                  break;
+                case "AC": 
+                  this.x = ACS26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "AR": {this.x = ARS26 
+                  break;
+                case "AR": 
+                  this.x = ARS26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "CA": {this.x = CAS26
+                  break;
+                case "CA": 
+                  this.x = CAS26
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   }; 
-                  break}
-                case "SC": {this.x = SCS26 
+                  break;
+                case "SC": 
+                  this.x = SCS26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "SA": {this.x = SAS26 
+                  break;
+                case "SA": 
+                  this.x = SAS26 
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   };
-                  break}
-                case "RS": {this.x = RS26
+                  break; 
+                case "RS": 
+                  this.x = RS26
                   this.x[0] = ['Time',"Speed"]
                   this.pieChartData =  {
                     chartType: 'LineChart',
                     dataTable: this.x,
                     options: {'title': 'Daily Traffic'}
                   }; 
-                  break}
-              }
+                  break;
+              } 
           }
         }
       }
@@ -297,13 +322,9 @@ export class TrendsComponent implements OnInit {
       //};
 
   public refreshData(){
-    console.log("In refresh Data");
     var day:string = angular.element( document.querySelector( '#d' ) ).val();
     var street:string = angular.element( document.querySelector( '#street' ) ).val();
     var direction:string = angular.element( document.querySelector( '#direction' ) ).val();
-    console.log(day)
-    console.log(street)
-    console.log(direction)
     this.LoadData(day,street,direction)
   }
 }

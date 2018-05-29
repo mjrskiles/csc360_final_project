@@ -13,16 +13,10 @@ export class AuthService
 {
   private user: Observable<User>;
   private userDetails: User = null;
-  private name: string = null;
-  public input: string = ""; 
-  public alarm: string = 'noAlarm'; 
+  private name: string = 'user';
 
   public gameAlarm : boolean = false;
   public trafficAlarm : boolean = false;
-
-
-  public alarms = [ 'NoAlarm', 'GamesOnly', 'TrafficIncrease'];
-
 
   constructor(private _firebaseAuth: AngularFireAuth, 
               private router: Router) 
@@ -31,54 +25,46 @@ export class AuthService
     this.user.subscribe(
       (user) => 
       {
-        //if (user) {
+        if (user) 
+        {
           this.userDetails = user;
           console.log(this.userDetails);
           this.name = this.userDetails.displayName;
           console.log(this.name);
 
-        // }
-        // else {
-        //   this.userDetails = null;
-        // }
+        }
+        else 
+        {
+           this.userDetails = null;
+        }
       }
     );
   }
 
-  getAlarmNotification()
-  {
-    if (this.alarm == this.alarms[1]) return 'There is a game';
-    if (this.alarm == this.alarms[2]) return 'There is a lot of traffic'
-    else return 'no alarm set'
-  }
-
-
-
-
   signInWithGoogle() 
   {
-    console.log("signing in");
+    //console.log("signing in");
     return this._firebaseAuth.auth.signInWithPopup(
     new firebase.auth.GoogleAuthProvider())
   }
 
   GetName()
   {
-    console.log("getting name");
+    //console.log("getting name");
     return this.name;
   }
 
   isLoggedIn() 
   {
-    console.log("checking logged in status");
+    //console.log("checking logged in status");
 
     if (this.userDetails == null ) 
     {
-      console.log("no user found");
+      //console.log("no user found");
       return false;
     } 
     else {
-      console.log("user found");
+      //console.log("user found");
       return true; 
     }
   }
@@ -88,5 +74,18 @@ export class AuthService
       .then((res) => this.router.navigate(['/']));
   }
 
+
+  CheckAlarms()
+  {
+    var result = '';
+    if (this.gameAlarm == true) result += 'There is a home game today at: ';
+    //if (this.authService.trafficAlarm == true) result += ' boi';
+    
+    alert(result);
+    return result;
+
+
+
+  }
 
 }
