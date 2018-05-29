@@ -1,9 +1,13 @@
 <div>
   <p *ngIf="!authService.isLoggedIn()">
-      <a class="closeSidebar" routerLink="/login"> Login</a>
+    <a class="nav-link" routerLink="/login"> 
+        <span class="align-middle">LOGIN</span>
+    </a>
   </p>
   <p *ngIf="authService.isLoggedIn()">
-
-      <a class="nav-link" routerLink="/dashboard">{{ authService.GetName() }}</a>
+    <!-- <a class="nav-link" routerLink="/dashboard" (click)="authService.CheckAlarms()"> -->
+    <a class="nav-link" routerLink="/dashboard">   
+        <span class="align-middle">{{ authService.GetName() }}</span>
+    </a>
   </p>
 </div>

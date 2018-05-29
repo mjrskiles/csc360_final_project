@@ -14,18 +14,17 @@ export class DashboardComponent implements OnInit
 
   CheckAlarms()
   {
-    var result = '';
-    if (this.authService.gameAlarm == true) result += 'There is a home game today at: ';
-    //if (this.authService.trafficAlarm == true) result += ' boi';
+    return this.authService.CheckAlarms();
+    // var result = '';
+    // if (this.authService.gameAlarm == true) result += 'There is a home game today at: ';
+    // //if (this.authService.trafficAlarm == true) result += ' boi';
     
-    alert(result);
-    return result;
-
-
-
+    // alert(result);
+    // return result;
   }
 
   ngOnInit() {
+    this.CheckAlarms();
   }
 
 }
