@@ -27,3 +27,7 @@ a.nav-link:hover {
 .bg-dark {
   background-color: rgb(14, 51, 134)!important;
 }
+
+.login-icon {
+  margin-left: 15px;
+}
