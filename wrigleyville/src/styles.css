@@ -14,7 +14,8 @@ body {
   The ng-sidebar demo app also does it this way.
   MS 5/3/18
 */
-.schedule-sidebar {
-  background-color: lightblue;
+.navigation-sidebar {
+  background-color: aliceblue;
   padding: 2em 0.5em;
+  width: 60%;
 }
