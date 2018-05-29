@@ -12,10 +12,13 @@ export class ContentViewComponent implements OnInit {
   ngOnInit() {
   }
 
-  private _opened: boolean = true;
+  // ng-sidebar settings
+  private _opened: boolean = false;
   private _position: string = 'right';
-  private _showBackdrop: boolean = false;
+  private _showBackdrop: boolean = true;
   private _sidebarClass: string = 'schedule-sidebar';
+  private _closeOnClickOutside: boolean = true
+  private _autoFocusFirstElement: boolean = false;
  
   private _toggleSidebar() {
     this._opened = !this._opened;

@@ -2,13 +2,28 @@ ng-sidebar-container {
   height: 100vh;
 }
 
-ng-sidebar a {
-  padding: 5px 10px;
-  text-decoration: none;
-  display: inline-block;
-  background-color: #eee;
+.link-icon {
+  padding-right: 10px;
 }
 
-.sidebar_control {
-  float: right;
+a.nav-link {
+  color: darkslategray;
+  
+}
+
+a.nav-link:hover {
+  color: #007bff;
+}
+
+.content {
+  padding-top: 60px;
+}
+
+.closeSidebar {
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+
+.bg-dark {
+  background-color: rgb(14, 51, 134)!important;
 }

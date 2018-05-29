@@ -1,8 +1,2 @@
-<div class="map">
-  <app-map style="margin: auto;"></app-map>
-</div>
-<div class="transit">
-  <app-transit-tracker></app-transit-tracker>
-</div>
-
-<div *ngIf="redLineArrivals">{{redLineArrivals["ctatt"]["eta"][0]["stpDe"]}} Arrival: {{redLineArrivals["ctatt"]["eta"][0]["arrT"]}}</div>
+<app-map></app-map>
+<app-traffic-congestion></app-traffic-congestion>

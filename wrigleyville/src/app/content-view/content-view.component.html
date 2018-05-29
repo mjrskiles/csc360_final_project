@@ -2,20 +2,66 @@
 <ng-sidebar-container>
 
   <!-- A sidebar -->
+  <!-- Starts with ng-sidebar settings -->
   <ng-sidebar 
   [(opened)]="_opened"
   [position]="_position"
   [showBackdrop]="_showBackdrop"
-  [sidebarClass]="'schedule-sidebar'">
-    <a closeSidebar>Closes the sidebar</a>
-    <app-game-schedule></app-game-schedule>
+  [sidebarClass]="'navigation-sidebar'"
+  [closeOnClickOutside]="_closeOnClickOutside"
+  [autoFocus]="_autoFocusFirstElement">
+
+    <!-- This section describes the content inside the sidebar -->
+    <a closeSidebar class="nav-link closeSidebar">
+        <object data="../../assets/baseline-arrow-right-24px.svg" type="image/svg+xml" width="40px"></object>
+    </a>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <app-current-user></app-current-user>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/livetraffic">
+            <object class="align-middle link-icon" data="../../assets/round-traffic-24px.svg" type="image/svg+xml" width="40px"></object>
+            <span class="align-middle">LIVE TRAFFIC</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/trends">
+            <object class="align-middle link-icon" data="../../assets/round-trending_up-24px.svg" type="image/svg+xml" width="40px"></object>
+            <span class="align-middle">TRENDS</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/transit">
+            <object class="align-middle link-icon" data="../../assets/round-directions_transit-24px.svg" type="image/svg+xml" width="40px"></object>
+            <span class="align-middle">TRANSIT</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/schedule">
+            <object class="align-middle link-icon" data="../../assets/round-calendar_today-24px.svg" type="image/svg+xml" width="40px"></object>
+            <span class="align-middle">CUBS SCHEDULE</span>
+          </a>
+        </li>
+      </ul>
   </ng-sidebar>
 
   <!-- Page content -->
+ 
   <div ng-sidebar-content>
-    <router-outlet></router-outlet>
-    <app-traffic-congestion></app-traffic-congestion>
-    <button class="sidebar_control" (click)="_toggleSidebar()">Toggle sidebar</button>
+    <!--<nav class="navbar navbar-dark fixed-top bg-dark"> -->
+    <nav class="navbar fixed-top navbar-dark bg-dark">
+
+        <img src="../assets/cubs-logo.png" width="64" height="64">
+        <a class="navbar-brand" routerLink="/livetraffic">Wrigleyville Traffic</a>
+        <button class="navbar-toggler" type="button" (click)="_toggleSidebar()">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- <img src="../assets/round-account_circle-24px.svg" width="64" height="64"> -->
+    </nav>
+    <div class="content">
+      <router-outlet class="container content"></router-outlet>
+    </div>
   </div>
 </ng-sidebar-container>
 

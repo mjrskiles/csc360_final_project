@@ -1,0 +1,50 @@
+
+<div class="container">
+
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <h1>Welcome {{ authService.GetName() }}</h1>
+
+
+    <!--<button (click)="onClickMe()">Click me!</button>
+    {{clickMessage}}
+    -->
+    <!--
+    <form>
+      <input type="radio" name="gender" value="male" checked> Male<br>
+      <input type="radio" name="gender" value="female"> Female<br>
+      <input type="radio" name="gender" value="other"> Other
+    </form>
+    -->
+    <!--
+    <div ng-app="">
+      <form>
+        First Name: <input type="text" ng-model="firstname">
+      </form>
+      <h1>You entered: {{firstname}}</h1>
+      <h1>You entered: {{authService.alarm}}</h1>
+    </div>
+
+  -->
+    <h2>{{ authService.input | uppercase }}</h2>
+    <div>
+          <label class="switch">
+            <div><input type="checkbox" [(ngModel)]="authService.gameAlarm"    value= true checked> Traffic Alerts</div>
+            <div><input type="checkbox" [(ngModel)]="authService.trafficAlarm" value= true checked> Game Alerts</div>
+          </label>
+    </div>
+    <!--<h1>gameAlarm: {{authService.gameAlarm}}</h1>
+    <h1>trafficAlarm: {{authService.trafficAlarm}}</h1>
+    -->
+    <button (click)="CheckAlarms()">Alarms</button>
+
+    <p *ngIf="!authService.isLoggedIn()">
+      <a class="btn btn-lg btn-primary" href="" role="button" (click)="authService.signInWithGoogle()">
+        Login</a>
+    </p>
+    <p *ngIf="authService.isLoggedIn()">
+      <a class="btn btn-lg btn-primary" href="" role="button" (click)="authService.logout()">Logout</a>
+    </p>
+  </div>
+
+</div> <!-- /container -->

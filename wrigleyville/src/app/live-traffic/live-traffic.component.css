@@ -1,9 +1,10 @@
-.map {
-  width: 90%;
-  margin: auto;
+.game-widget {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 8px;
 }
 
-.transit {
-  width: 90%;
-  margin: auto;
+.widget-content {
+  max-height: 0;
 }
