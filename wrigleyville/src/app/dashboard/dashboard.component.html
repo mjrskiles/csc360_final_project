@@ -11,7 +11,7 @@
           <span class = "alert">Traffic Alerts:</span>
           <label class="switch">
            
-            <input type="checkbox" [(ngModel)]="authService.gameAlarm"    
+            <input type="checkbox" [(ngModel)]="authService.trafficAlarm"    
             value= true checked> 
             <div class="slider round"></div>
           </label>
@@ -20,7 +20,7 @@
         <div>
           <span class= "alert">Game Alerts:</span>
           <label class="switch">
-            <input type="checkbox" [(ngModel)]="authService.trafficAlarm" 
+            <input type="checkbox" [(ngModel)]="authService.gameAlarm" 
             value= true checked> 
             <div class="slider round"></div>
           </label>
@@ -30,7 +30,7 @@
     <!--<h1>gameAlarm: {{authService.gameAlarm}}</h1>
     <h1>trafficAlarm: {{authService.trafficAlarm}}</h1>
     -->
-    <!-- <button (click)="CheckAlarms()">Alarms</button> -->
+    <button (click)="CheckAlarms()"></button>
 
     <a class="btn btn-lg btn-primary" href="" role="button" (click)="authService.logout()">Logout</a>
     

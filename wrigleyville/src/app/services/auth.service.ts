@@ -78,7 +78,7 @@ export class AuthService
   CheckAlarms()
   {
     var result = '';
-    if (this.gameAlarm == true) result += 'There is a home game today at: ';
+    if (this.gameAlarm == true) result += 'There is a home game today at: 6:10 pm';
     //if (this.authService.trafficAlarm == true) result += ' boi';
     
     alert(result);
