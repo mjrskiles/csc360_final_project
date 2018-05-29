@@ -14,6 +14,7 @@ import { Observable } from 'rxjs/Observable';
 export class GameScheduleComponent implements OnInit {
 
   private schedule: Observable<any[]>;
+  private daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 
   constructor(private gameScheduleService: GameScheduleService) { }
 
@@ -26,5 +27,10 @@ export class GameScheduleComponent implements OnInit {
   // the data is updated, so it would be possible get real time schedule updates.
   getSchedule() {
     this.schedule = this.gameScheduleService.getSchedule();
+  }
+
+  getDayOfWeekFrom(date: string): string {
+    let day = new Date(date);
+    return this.daysOfWeek[day.getDay()]
   }
 }
