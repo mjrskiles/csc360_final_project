@@ -35,6 +35,7 @@ import { ArrivalTimePipe } from './arrival-time.pipe';
 
 import { Ng2GoogleChartsModule } from 'ng2-google-charts';
 
+
 @NgModule({
   exports: [
     HttpModule
