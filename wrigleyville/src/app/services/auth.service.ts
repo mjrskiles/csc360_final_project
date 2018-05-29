@@ -14,6 +14,15 @@ export class AuthService
   private user: Observable<User>;
   private userDetails: User = null;
   private name: string = null;
+  public input: string = ""; 
+  public alarm: string = 'noAlarm'; 
+
+  public gameAlarm : boolean = false;
+  public trafficAlarm : boolean = false;
+
+
+  public alarms = [ 'NoAlarm', 'GamesOnly', 'TrafficIncrease'];
+
 
   constructor(private _firebaseAuth: AngularFireAuth, 
               private router: Router) 
@@ -36,14 +45,21 @@ export class AuthService
     );
   }
 
+  getAlarmNotification()
+  {
+    if (this.alarm == this.alarms[1]) return 'There is a game';
+    if (this.alarm == this.alarms[2]) return 'There is a lot of traffic'
+    else return 'no alarm set'
+  }
+
+
+
+
   signInWithGoogle() 
   {
     console.log("signing in");
-
     return this._firebaseAuth.auth.signInWithPopup(
     new firebase.auth.GoogleAuthProvider())
-
-
   }
 
   GetName()
@@ -70,7 +86,6 @@ export class AuthService
   {
       this._firebaseAuth.auth.signOut()
       .then((res) => this.router.navigate(['/']));
-
   }
 
 
