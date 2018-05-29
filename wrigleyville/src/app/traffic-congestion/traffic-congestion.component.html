@@ -16,10 +16,9 @@
     }
 </style>
 
-<!--tr:nth-child(even) {background-color: #f2f2f2;}-->
-
 <div *ngIf="speeds">
-    <table>
+    <button (click) = "getData()">Refresh Live Data</button>
+    <table >
         <tr>          
           <th>Intersection</th>
           <th>Direction</th> 
