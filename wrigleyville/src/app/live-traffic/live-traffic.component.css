@@ -1,0 +1,10 @@
+.game-widget {
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(240, 240, 240);
+  margin-bottom: 8px;
+}
+
+.widget-content {
+  max-height: 0;
+}

@@ -12,4 +12,15 @@ export class LiveTrafficComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClickCollapse(event: any) {
+    let parent = event.target;
+    let content = parent.nextElementSibling;
+
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  }
+
 }
