@@ -35,8 +35,8 @@ describe('GameScheduleService', () => {
     let date = new Date('1990-02-23T12:00:00');
     let str = gameScheduleService.getFormattedDateString(date);
     expect(str.length).toBe(8);
-    expect(str[2]).toBe('/')
-    expect(str[5]).toBe('/')
+    expect(str[2]).toBe('/');
+    expect(str[5]).toBe('/');
     expect(parseInt(str.slice(0,2))).toEqual(jasmine.any(Number));
     expect(parseInt(str.slice(3,5))).toEqual(jasmine.any(Number));
     expect(parseInt(str.slice(6))).toEqual(jasmine.any(Number));

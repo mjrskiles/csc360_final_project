@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GameInfo } from '../GameInfo';
-
-import { ViewChild } from '@angular/core';
-import { } from '@types/googlemaps';
+import { GameScheduleService } from '../game-schedule.service';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-live-traffic',
@@ -11,28 +10,16 @@ import { } from '@types/googlemaps';
 })
 export class LiveTrafficComponent implements OnInit {
 
-  // Temporary example game
-  game: GameInfo = {
-    "date": "05/27/18",
-    "time": "07:08 PM",
-    "description": "Giants at Cubs",
-    "isHomeGame": true
-  }
-
-  @ViewChild('gmap') gmapElement: any;
-  map: google.maps.Map;
+  private schedule: Observable<any[]>;
+  nextHomeGame: GameInfo;
+  gameIsToday: Boolean = false;
 
   private daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-  constructor() { }
+  constructor(private gameScheduleService: GameScheduleService) { }
 
   ngOnInit() {
-    var mapProp = {
-      center: new google.maps.LatLng(18.5793, 73.8143),
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    this.map = new google.maps.Map(this.gmapElement.nativeElement, mapProp);
+    this.getNextHomeGame();
   }
 
   onClickCollapse(event: any) {
@@ -49,6 +36,25 @@ export class LiveTrafficComponent implements OnInit {
   getDayOfWeekFrom(date: string): string {
     let day = new Date(date);
     return this.daysOfWeek[day.getDay()];
+  }
+
+  // Get the next home game to display in the info card
+  getNextHomeGame() {
+    this.gameScheduleService.getSchedule().subscribe( response => {
+      for(let game of response) {
+        if (game["isHomeGame"]) {
+          this.nextHomeGame = game;
+
+          // Check if the game is today
+          let gameDate = new Date(game["date"]);
+          let today = new Date()
+          if (gameDate.getDate == today.getDate) {
+            this.gameIsToday = true;
+          }
+          break;
+        }
+      }
+    });
   }
 
 }

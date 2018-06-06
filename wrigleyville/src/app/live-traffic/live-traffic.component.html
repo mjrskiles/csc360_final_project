@@ -1,20 +1,22 @@
-<accordion>
+<!-- This is the info card that displays when the next home game is -->
+<accordion *ngIf="nextHomeGame">
  <accordion-group>
    <div accordion-heading style="padding-left: 0; padding-right: 0;">
       <object class="align-middle link-icon" data="../../assets/outline-info-24px.svg" type="image/svg+xml" width="40px"></object>
-      <span>There is a home game today at 7:08 PM</span>
+      <span *ngIf="gameIsToday">There is a home game today at {{nextHomeGame["time"]}}</span>
+      <span *ngIf="!gameIsToday">The next home game is {{ getDayOfWeekFrom(nextHomeGame["date"])}} {{nextHomeGame["date"]}}</span>
    </div>
    <div class="widget-content game row" style="padding-left: 0; padding-right: 0;">
       <div class="game-label col-4">
-        <div>{{ getDayOfWeekFrom(game["date"]) }}</div>
-        <div>{{game["date"]}}</div>
-        <div>{{game["time"]}}</div>
+        <div>{{ getDayOfWeekFrom(nextHomeGame["date"]) }}</div>
+        <div>{{nextHomeGame["date"]}}</div>
+        <div>{{nextHomeGame["time"]}}</div>
       </div>
       <div class="game-label col-6 align-self-center">
-        <span class="align-middle">{{game["description"]}}</span>
+        <span class="align-middle">{{nextHomeGame["description"]}}</span>
       </div>
       <div class="col-2 align-self-center">
-        <img *ngIf="game['isHomeGame']" src="../../assets/cubs-logo-md.png" width="40px" height="40px">
+        <img src="../../assets/cubs-logo-md.png" width="40px" height="40px">
       </div>
     </div>
  </accordion-group>
