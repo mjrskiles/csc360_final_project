@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
+It is designed as a mobile website. It should be view in a mobile format using your browser's developer tools.
+
 ## Development server
 
 ### Important
